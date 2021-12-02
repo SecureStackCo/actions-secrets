@@ -1,0 +1,29 @@
+name: 'SecureStack Secrets Analysis'
+description: 'Execute SecureStack Secrets Analysis'
+inputs:
+  securestack_api_key:
+    description: 'SecureStack API key - generate one at https://app.securestack.com'
+    required: true
+  securestack_app_id:
+    description: 'SecureStack Application ID - available when viewing applications at https://app.securestack.com'
+    required: true
+  severity:
+    description: 'Severities lower than this input value will not be reported; value should be one of: critical | high | medium | low'
+    required: true
+  flags:
+    description: 'Optional flags for the bloodhound-cli secrets command - run bloodhound-cli code --help for more details.'
+    required: false
+    default: ''
+runs:
+  using: 'composite'
+  steps:
+    - name: Pull bloodhound-cli image
+      shell: bash
+      run: docker pull securestackau/bloodhound-cli
+    - name: Run bloodhound-cli
+      shell: bash
+      env:
+        BH_API_KEY: ${{ inputs.securestack_api_key }}
+        BH_APP_ID: ${{ inputs.securestack_app_id }}
+        BH_SEVERITY: ${{ inputs.severity }}
+      run: docker run -e BH_API_KEY -e BH_APP_ID -e BH_SEVERITY securestackau/bloodhound-cli secrets ${{ inputs.flags }}; echo $?

@@ -1,0 +1,19 @@
+name: Example Workflow Using SecureStack Actions
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo for running secrets analysis within workflow
+        id: checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          fetch-depth: 0
+      - name: Secrets Analysis Step
+        id: secrets
+        uses: SecureStackCo/actions/secrets@main
+        with:
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
+          securestack_app_id: 'a9ad205b-d519-4a95-833d-304b6e82be21'
+          severity: critical
+          flags: '-d 50'
