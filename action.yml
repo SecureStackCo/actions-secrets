@@ -1,7 +1,7 @@
 name: 'SecureStack Secrets Analysis'
 description: 'Execute SecureStack Secrets Analysis'
 branding:
-  icon: 'key'  
+  icon: 'code'  
   color: 'green'
 inputs:
   securestack_api_key:
