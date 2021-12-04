@@ -3,7 +3,7 @@
 A GitHub Action that analyses your source code for secrets, credentials, API keys, server and database hostnames/URLS, and a lot more!  When you add this to GitHub Actions we will analyze your source code to make sure there is no sensitive data in your commit. See below for the specific types of credentials and files we scan for.
 
 ```
-name: Example Workflow Using SecureStack Actions
+name: Example Workflow Using SecureStack Secrets Scan Action
 on: push
 jobs:
   security:
