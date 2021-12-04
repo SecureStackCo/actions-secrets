@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 0
       - name: Secrets Analysis Step
         id: secrets
-        uses: SecureStackCo/actions-exposure@v0.1.0
+        uses: SecureStackCo/actions-secrets@v0.1.0
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: 'a9ad205b-d519-4a95-833d-304b6e82be21'
