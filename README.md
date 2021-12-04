@@ -19,7 +19,7 @@ jobs:
         uses: SecureStackCo/actions/secrets@main
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: 'a9ad205b-d519-4a95-833d-304b6e82be21'
+          securestack_app_id: '<Application Id>'
           severity: critical
           flags: '-d 50'
 ```
