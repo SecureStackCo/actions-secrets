@@ -27,4 +27,4 @@ runs:
         BH_APP_ID: ${{ inputs.securestack_app_id }}
         BH_SEVERITY: ${{ inputs.severity }}
       run: |
-        docker run -e BH_API_KEY -e BH_APP_ID -e BH_SEVERITY -v "/home/runner/work/actions-secrets/actions-secrets":"/github/workspace" securestackau/bloodhound-cli code -s ${{ inputs.flags }}; echo $?
+        docker run -e BH_API_KEY -e BH_APP_ID -e BH_SEVERITY -v $GITHUB_WORKSPACE:/github/workspace securestackau/bloodhound-cli code -s ${{ inputs.flags }}; echo $?
