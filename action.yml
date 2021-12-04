@@ -1,5 +1,8 @@
 name: 'SecureStack Secrets Analysis'
 description: 'Execute SecureStack Secrets Analysis'
+branding:
+  icon: 'shield'  
+  color: 'green'
 inputs:
   securestack_api_key:
     description: 'SecureStack API key - generate one at https://app.securestack.com'
