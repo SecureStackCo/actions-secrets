@@ -41,7 +41,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 3. Copy the value of the application id on the View Application screen.
 4. Paste into the value of the `securestack_app_id` action input for the step using the SecureStack action in your workflow.
 
-## What types of credentials do you find?
+## What types of credentials does this GitHub Action find?
 1. API keys like Stripe, AWS, Amplitude and a bazillion more
 2. Server and database hostnames or URLS
 3. Passwords and Usernames
