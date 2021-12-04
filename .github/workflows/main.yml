@@ -16,4 +16,4 @@ jobs:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: '1ec3e0a3-c4c6-48fe-b505-e92eea4f413b'
           severity: critical
-          flags: '-d 50'
+          flags: '-d 999'
