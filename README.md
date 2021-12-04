@@ -1,6 +1,6 @@
 # SecureStack GitHub Actions
 
-A GitHub Action to execute SecureStack secrets analysis on an application code repository.
+A GitHub Action that analyses your source code for secrets, credentials, API keys, server and database hostnames/URLS, and a lot more!  When you add this to GitHub Actions we will analyze your source code to make sure there is no sensitive data in your commit. See below for the specific types of credentials and files we scan for.
 
 ```
 name: Example Workflow Using SecureStack Actions
@@ -27,18 +27,24 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 
 `$ bloodhound-cli code --help`
 
-## Getting your SecureStack API Key
+## Create your SecureStack API Key and save as GitHub Secret
 
 1. Log in to [SecureStack](https://app.securestack.com) and go to the Profile -> GENERATE KEY screen.
 2. Generate an API key and copy the value.
-3. Paste into the value of a secret called SECURESTACK_API_KEY_SECRET in the GitHub repo settings.
+3. Go to Settings for your GitHub repository and click on Secrets at the bottom left.
+4. Create a new secret named SECURESTACK_API_KEY_SECRET and paste the value from step 2 into the field.
 
-## Getting your SecureStack Application ID
+## Retreiving your SecureStack Application ID
 
 1. Log in to [SecureStack](https://app.securestack.com).
 2. Open the application you wish to analyse.
 3. Copy the value of the application id on the View Application screen.
 4. Paste into the value of the `securestack_app_id` action input for the step using the SecureStack action in your workflow.
 
+## What types of credentials do you find?
+1. API keys like Stripe, AWS, Amplitude and a bazillion more
+2. Server and database hostnames or URLS
+3. Passwords and Usernames
+4. .env files and git indexes
 
-Made with 💜 by SecureStack
+Made with 💜  by [SecureStack](https://securestack.com)
