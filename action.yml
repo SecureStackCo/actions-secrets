@@ -1,5 +1,5 @@
 name: 'SecureStack Secrets Analysis'
-description: 'Execute SecureStack Secrets Analysis'
+description: 'Scan your source code for sensitive data like API keys, passwords, server host strings, config and env files and more.'
 branding:
   icon: 'code'  
   color: 'green'
