@@ -13,6 +13,7 @@ jobs:
         id: checkout
         uses: actions/checkout@v2.4.0
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
       - name: Secrets Analysis Step
         id: secrets
