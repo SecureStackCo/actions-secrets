@@ -21,7 +21,7 @@ jobs:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: '<Application Id>'
           severity: critical
-          flags: '-d 50'
+          flags: '-d 1 -a <Application Id>'
 ```
 NOTE - to understand possible values for the action input `flags`, run the SecureStack cli locally:
 
