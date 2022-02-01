@@ -3,7 +3,7 @@
 A GitHub Action that analyses your source code for secrets, credentials, API keys, server and database hostnames/URLS, and a lot more!  When you add this to GitHub Actions we will analyze your source code to make sure there is no sensitive data in your commit. See below for the specific types of credentials and files we scan for.
 
 ```
-name: Example Workflow Using SecureStack Secrets Scan Action
+name: Example Workflow Using SecureStack Actions
 on: push
 jobs:
   security:
@@ -13,16 +13,16 @@ jobs:
         id: checkout
         uses: actions/checkout@v2.4.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
       - name: Secrets Analysis Step
         id: secrets
-        uses: SecureStackCo/actions-secrets@v0.1.0
+        uses: SecureStackCo/actions-secrets@v0.1.2
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: '<Application Id>'
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
-          flags: '-d 1 -a <Application Id>'
+          flags: '-d 1'
+
 ```
 NOTE - to understand possible values for the action input `flags`, run the SecureStack cli locally:
 
@@ -40,7 +40,8 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 1. Log in to [SecureStack](https://app.securestack.com).
 2. Open the application you wish to analyse.
 3. Copy the value of the application id on the View Application screen.
-4. Paste into the value of the `securestack_app_id` action input for the step using the SecureStack action in your workflow.
+4. Go to Settings for your GitHub repository and click on Secrets at the bottom left.
+5. Create a new secret named SECURESTACK_APP_ID and paste the value from step 3 into the field.
 
 ## What types of credentials does this GitHub Action find?
 1. API keys like Stripe, AWS, Amplitude and a bazillion more
