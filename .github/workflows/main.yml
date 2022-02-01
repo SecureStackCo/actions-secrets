@@ -13,7 +13,7 @@ jobs:
         id: secrets
         uses: SecureStackCo/actions-secrets@v0.1.2
         with:
-          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
-          securestack_app_id: '1ec3e0a3-c4c6-48fe-b505-e92eea4f413b'
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
           flags: '-d 1'
