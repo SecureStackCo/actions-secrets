@@ -18,7 +18,7 @@ jobs:
         id: secrets
         uses: SecureStackCo/actions-secrets@v0.1.2
         with:
-          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
           securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
           flags: '-d 1'
@@ -39,7 +39,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 
 1. Log in to [SecureStack](https://app.securestack.com).
 2. Open the application you wish to analyse.
-3. Copy the value of the application id on the View Application screen.
+3. Copy the value of the application id on the View Application screen in upper right corner.
 4. Go to Settings for your GitHub repository and click on Secrets at the bottom left.
 5. Create a new secret named SECURESTACK_APP_ID and paste the value from step 3 into the field.
 
