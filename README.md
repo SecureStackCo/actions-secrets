@@ -58,7 +58,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 2. [SecureStack Web Vulnerability & Cloud Misconfiguration Analysis](https://github.com/marketplace/actions/securestack-web-vulnerability-analysis) - Scan your running application url for cloud misconfigurations and web vulnerabilities.
 3. [SecureStack Log4j Analysis](https://github.com/marketplace/actions/securestack-log4j-vulnerability-analysis) - Scan your application for Log4j/Log4Shell vulnerabilities.
 
-## Check out all our YouTube videos:
+## Learn more about SecureStack with our YouTube Channel:
 https://www.youtube.com/watch?v=YrPITQNy9UM&list=PL_8Xjyi5rInxzhpQkDRipipmaj0lT6pJ8 
 
 Made with 💜  by [SecureStack](https://securestack.com)
