@@ -55,7 +55,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 
 ## Check out our other GitHub Actions:
 1. [SecureStack Software Composition Analysis (SCA)](https://github.com/marketplace/actions/securestack-application-composition-analysis) - Scan your application for vulnerable third-party and open source libraries.
-2. [SecureStack Web Vulnerability & Cloud Misconfiguration Analysis](https://github.com/marketplace/actions/securestack-application-composition-analysis) - Scan your running application url for cloud misconfigurations and web vulnerabilities.
+2. [SecureStack Web Vulnerability & Cloud Misconfiguration Analysis](https://github.com/marketplace/actions/securestack-web-vulnerability-analysis) - Scan your running application url for cloud misconfigurations and web vulnerabilities.
 3. [SecureStack Log4j Analysis](https://github.com/marketplace/actions/securestack-log4j-vulnerability-analysis) - Scan your application for Log4j/Log4Shell vulnerabilities.
 
 Made with 💜  by [SecureStack](https://securestack.com)
