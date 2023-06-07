@@ -63,6 +63,6 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 5. Or, our [All-in-One GitHub Action](https://github.com/marketplace/actions/securestack-all-in-one-github-action) - We've put all of our actions together into one "Action to rule them ALL"!
 
 ## Learn more about SecureStack with our YouTube Channel:
-https://www.youtube.com/watch?v=YrPITQNy9UM&list=PL_8Xjyi5rInxzhpQkDRipipmaj0lT6pJ8 
+Coming soon!
 
 Made with 💜  by [SecureStack](https://securestack.com)
