@@ -28,21 +28,19 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 
 `$ bloodhound-cli code --help`
 
-## Create your SecureStack API Key as GitHub Secret
+## Create your SecureStack API Key and save as GitHub Secret
 
-1. Create a [SecureStack](https://app.securestack.com) account using your GitHub credentials.  You get 20 scans for free and you don't need to add a credit card.
-2. Once you are logged in go to "Settings" in the black drawer on the left, and then -> API tab.
-4. Generate an API key and copy the value.
-5. Go to Settings for your GitHub repository and click on Secrets -> Actions at the bottom left.
-6. Create a new secret named SECURESTACK_API_KEY and paste the value from step 2 into the field.
+1. Log in to [SecureStack](https://app.securestack.com) with your GitHub credentials.
+2. Go to Settings in the lower left corner, and then select the 6th tab: API.![Create API key](./images/securestack-create-apikey.png)
+3. Generate a new API key and copy the value.![Copy API key](./images/securestack-copy-apikey.png)
+4. Now back in GitHub, go to Settings for your GitHub repository and click on Secrets, and then Actions at the bottom left.
+5. Create a new secret named SECURESTACK_API_KEY and paste the value from step 2 into the field and click "Add secret".![Create GitHub Secret for API key](./images/securestack-github-apikey-secret.png)
 
 ## Retreiving your SecureStack Application ID
 
 1. Log in to [SecureStack](https://app.securestack.com).
-2. Open the application you wish to analyse.  If you haven't created a managed application you can follow the directions in this [VIDEO](https://youtu.be/mapgawLMVKg) to create one.  
-3. Copy the value of the application id on the View Application screen.
-4. Go to Settings for your GitHub repository and click on Secrets -> Actions at the bottom left.
-5. Create a new secret named SECURESTACK_APP_ID and paste the value from step 3 into the field.
+2. In the application drop down at the top left choose the application you want to use and click on "Copy Application ID" ![Copy Application ID](./images/securestack-copy-appid.png)
+3. Create a new secret named SECURESTACK_APP_ID and paste the value from step 2 into the field and click "Add secret".![Create GitHub Secret for app_id](./images/securestack-github-appid-secret.png)
 
 ## What types of credentials does this GitHub Action find?
 1. API keys like Stripe, AWS, Amplitude and a bazillion more
@@ -50,13 +48,18 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 3. Passwords and Usernames
 4. .env files and git indexes
 
-## Watch this video to learn how to setup your first GitHub Action with SecureStack
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/0sYXsCmY2es/0.jpg)](http://www.youtube.com/watch?v=0sYXsCmY2es "Video Title")
+## How can I see the output of the secrets analysis?
+1. You can view the analysis output right in the GitHub Action workflow output![workflow output](./images/securestack-secrets-output-action-log.png)
+2. You can run a local secrets analysis with our [bloodhound-cli : ](https://app.securestack.com/download-cli)
+``` bloodhound-cli code -s -d 1 -a <app_id> ```
+
+3. You can interact with the analysis output in the SecureStack SaaS ![platform](./images/securestack-secrets-saas-view.png)
 
 ## Check out our other GitHub Actions:
 1. [SecureStack Software Composition Analysis (SCA)](https://github.com/marketplace/actions/securestack-application-composition-analysis) - Scan your application for vulnerable third-party and open source libraries.
-2. [SecureStack Web Vulnerability & Cloud Misconfiguration Analysis](https://github.com/marketplace/actions/securestack-web-vulnerability-analysis) - Scan your running application url for cloud misconfigurations and web vulnerabilities.
-3. [SecureStack Log4j Analysis](https://github.com/marketplace/actions/securestack-log4j-vulnerability-analysis) - Scan your application for Log4j/Log4Shell vulnerabilities.
+2. [SecureStack SBOM](https://github.com/marketplace/actions/sbom) - Create a software bill of materials (SBOM) for your application.
+3. [SecureStack Web Vulnerability & Cloud Misconfiguration Analysis](https://github.com/marketplace/actions/securestack-web-vulnerability-analysis) - Scan your running application url for cloud misconfigurations and web vulnerabilities.
+4. [SecureStack Log4j Analysis](https://github.com/marketplace/actions/securestack-log4j-vulnerability-analysis) - Scan your application for Log4j/Log4Shell vulnerabilities.
 
 ## Learn more about SecureStack with our YouTube Channel:
 https://www.youtube.com/watch?v=YrPITQNy9UM&list=PL_8Xjyi5rInxzhpQkDRipipmaj0lT6pJ8 
