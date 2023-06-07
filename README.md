@@ -41,6 +41,7 @@ NOTE - to understand possible values for the action input `flags`, run the Secur
 1. Log in to [SecureStack](https://app.securestack.com).
 2. In the application drop down at the top left choose the application you want to use and click on "Copy Application ID" ![Copy Application ID](./images/securestack-copy-appid.png)
 3. Create a new secret named SECURESTACK_APP_ID and paste the value from step 2 into the field and click "Add secret".![Create GitHub Secret for app_id](./images/securestack-github-appid-secret.png)
+4. When completed the two GitHub Secrets should look like this![Successfully created two secrets](./images/securestack-github-secrets-success.png)
 
 ## What types of credentials does this GitHub Action find?
 1. API keys like Stripe, AWS, Amplitude and a bazillion more
